@@ -2,7 +2,6 @@ from subprocess import run
 from datetime import datetime
 
 
-
 def main():
 
     with open("C:/Users/roman/scripts/python/choco_upgrade.log", "w") as logfile:
@@ -12,8 +11,9 @@ def main():
         )
 
         run(
-            ["choco", "upgrade", "all", "--a"],
-            stdout=logfile
+            ["choco", "upgrade", "all", "--a", "--y"],
+            stdout=logfile,
+            shell=True
         )
 
 
